@@ -1,0 +1,10 @@
+aside a.active{
+    color: royalblue;
+    text-decoration: underline;
+    
+}
+aside a:hover{
+    transition: all 300ms ease-in-out;
+    background-color: rgb(150, 118, 233);
+    padding: 5px 10px;
+}
