@@ -6,6 +6,7 @@ import { Outlet, useNavigation } from 'react-router';
 import Footer from '../Structure/Footer';
 import { NavLink } from 'react-router';
 import './Root.css'
+import { RiseLoader } from 'react-spinners';
 
 const RootLayout = () => {
    const navigation = useNavigation();
@@ -13,7 +14,10 @@ const RootLayout = () => {
     return (
         <div className='mx-12'>
             <Navbar></Navbar>
-            {isNavigatating && <p className='font-bold text-4xl'>Loding</p>}
+            
+            <div className='flex items-center justify-center relative top-50'>
+                {isNavigatating &&<RiseLoader color='red'></RiseLoader>}
+            </div>
             <Outlet></Outlet>
             <div>
               <aside className='flex flex-col gap-5 m-4'>
